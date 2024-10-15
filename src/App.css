@@ -1,0 +1,132 @@
+/* General styling for the entire app */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+/* Container for the weather component */
+section {
+  /* background-color: #ffffff; */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://media.istockphoto.com/id/1257951336/photo/transparent-umbrella-under-rain-against-water-drops-splash-background-rainy-weather-concept.jpg?s=2048x2048&w=is&k=20&c=oCeUC-IkL0PeNBE1KwDUHBWw692n3T4T6I-usYtX_Qc=');
+  background-position: center;
+  background-size: cover;
+
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+  transition: transform 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+section:hover {
+  transform: translateY(-10px);
+}
+
+/* Animation for smooth fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading for the title */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #003f8a;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Centering the input and button container */
+#inputDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+/* Input styling */
+input[type="text"] {
+  padding: 1rem;
+  border-radius: 30px;
+  border: 2px solid #66a6ff;
+  width: 80%;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  outline: none;
+  text-align: center;
+  transition: all 0.3s ease;
+
+
+}
+
+input[type="text"]:focus {
+  border-color: #003f8a;
+  box-shadow: 0 0 10px rgba(0, 63, 138, 0.2);
+
+}
+
+/* Button styling */
+button {
+  background-color: #003f8a;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 15px rgba(0, 63, 138, 0.3);
+}
+
+/* Weather details styling */
+h3 {
+  font-size: 1.7rem;
+  margin-top: 2rem;
+  color: #003f8a;
+}
+
+p {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+/* Loading text styling */
+p.loadings {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ff6b6b;
+}
+
+/* Shadow effect on weather details */
+.weather-details {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
